@@ -107,6 +107,99 @@ class sacramentos extends StatelessWidget {
                           ),
                         ),
                       ),
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        height: 200.0,
+                        width: 340,
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(
+                                  color: Color.fromRGBO(0, 160, 227, 1))),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => sacramentos()));
+                          },
+                          padding: EdgeInsets.all(10.0),
+                          color: Colors.white38,
+                          textColor: Colors.black,
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: RichText(
+                                text: TextSpan(children: [
+                              TextSpan(
+                                  text: "Matrimonio        ",
+                                  style: TextStyle(
+                                      fontSize: 34, color: Colors.black)),
+                              WidgetSpan(child: Icon(Icons.book, size: 70))
+                            ])),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        height: 200.0,
+                        width: 340,
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(
+                                  color: Color.fromRGBO(0, 160, 227, 1))),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => sacramentos()));
+                          },
+                          padding: EdgeInsets.all(10.0),
+                          color: Colors.white38,
+                          textColor: Colors.black,
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: RichText(
+                                text: TextSpan(children: [
+                              TextSpan(
+                                  text: "Orden sacerdotal    ",
+                                  style: TextStyle(
+                                      fontSize: 34, color: Colors.black)),
+                              WidgetSpan(child: Icon(Icons.pin_drop, size: 70))
+                            ])),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        height: 200.0,
+                        width: 340,
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(
+                                  color: Color.fromRGBO(0, 160, 227, 1))),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => sacramentos()));
+                          },
+                          padding: EdgeInsets.all(10.0),
+                          color: Colors.white38,
+                          textColor: Colors.black,
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: RichText(
+                                text: TextSpan(children: [
+                              TextSpan(
+                                  text: "Consagración    ",
+                                  style: TextStyle(
+                                      fontSize: 34, color: Colors.black)),
+                              WidgetSpan(child: Icon(Icons.pin_drop, size: 70))
+                            ])),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 )),
