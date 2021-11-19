@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pdm/page/contacto_page.dart';
 import 'package:pdm/page/donaciones_page.dart';
+import 'package:pdm/page/sacramentos.dart';
 import 'package:pdm/widget/button_widget.dart';
 import 'package:pdm/widget/navigation_drawer_widget.dart';
 
@@ -39,64 +40,27 @@ class _MainPageState extends State<MainPage> {
                   width: 340,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
-                    ),
+                        borderRadius: BorderRadius.circular(18.0),
+                        side:
+                            BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: () {
-                      /* Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PeoplePage()),
-                      ); */
-                    },
-                    padding: EdgeInsets.all(10.0),
-                    color: Colors.white38,
-                    textColor: Colors.black,
-                    child: 
-                      Align(
-                        alignment: Alignment.centerLeft, 
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(text: "Sacramentos    ", style: TextStyle(fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.book, size: 70))
-                            ]
-                          )
-                        ),
-                      ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.all(10),
-                  height: 200.0,
-                  width: 340,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => DonacionesPage()),
+                        MaterialPageRoute(builder: (context) => sacramentos()),
                       );
                     },
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
                     textColor: Colors.black,
-                    child: 
-                      Align(
-                        alignment: Alignment.centerLeft, 
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(text: "Donaciones      ", style: TextStyle(fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.monetization_on, size: 70))
-                            ]
-                          )
-                        ),
-                      ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: "Sacramentos    ",
+                            style:
+                                TextStyle(fontSize: 34, color: Colors.black)),
+                        WidgetSpan(child: Icon(Icons.book, size: 70))
+                      ])),
+                    ),
                   ),
                 ),
                 Container(
@@ -105,28 +69,58 @@ class _MainPageState extends State<MainPage> {
                   width: 340,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
+                        borderRadius: BorderRadius.circular(18.0),
+                        side:
+                            BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DonacionesPage()),
+                      );
+                    },
+                    padding: EdgeInsets.all(10.0),
+                    color: Colors.white38,
+                    textColor: Colors.black,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: "Donaciones      ",
+                            style:
+                                TextStyle(fontSize: 34, color: Colors.black)),
+                        WidgetSpan(child: Icon(Icons.monetization_on, size: 70))
+                      ])),
                     ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  height: 200.0,
+                  width: 340,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                        side:
+                            BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: () {},
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
                     textColor: Colors.black,
-                    child: 
-                      Align(
-                        alignment: Alignment.centerLeft, 
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(text: "Examen de conciencia        ", style: TextStyle(fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.list_sharp, size: 70))
-                            ]
-                          )
-                        ),
-                      ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: "Examen de conciencia        ",
+                            style:
+                                TextStyle(fontSize: 34, color: Colors.black)),
+                        WidgetSpan(child: Icon(Icons.list_sharp, size: 70))
+                      ])),
+                    ),
                   ),
                 ),
-                
               ],
             ),
           ),
