@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pdm/page/people_page.dart';
+import 'package:pdm/page/contacto_page.dart';
 import 'package:pdm/page/donaciones_page.dart';
 import 'package:pdm/page/sacramentos.dart';
 import 'package:pdm/widget/button_widget.dart';
@@ -44,8 +44,6 @@ class _MainPageState extends State<MainPage> {
                         side:
                             BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: () {
-                      Navigator.push(
-                        context,
                         MaterialPageRoute(builder: (context) => sacramentos()),
                       );
                     },

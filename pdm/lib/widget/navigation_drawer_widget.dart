@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pdm/page/donaciones_page.dart';
-import 'package:pdm/page/people_page.dart';
+import 'package:pdm/page/contacto_page.dart';
 import 'package:pdm/page/user_page.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -36,7 +36,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                   buildSearchField(),
                   const SizedBox(height: 24),
                   buildMenuItem(
-                    text: 'People',
+                    text: 'Contacto',
                     icon: Icons.people,
                     onClicked: () => selectedItem(context, 0),
                   ),
@@ -166,7 +166,7 @@ class NavigationDrawerWidget extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => PeoplePage(),
+          builder: (context) => ContactoPage(),
         ));
         break;
       case 1:
