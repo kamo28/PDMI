@@ -44,8 +44,7 @@ class _MainPageState extends State<MainPage> {
                         side:
                             BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: () {
-                        MaterialPageRoute(builder: (context) => sacramentos()),
-                      );
+                      MaterialPageRoute(builder: (context) => sacramentos());
                     },
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
