@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pdm/inicio.dart';
 import 'package:pdm/widget/navigation_drawer_widget.dart';
 
-class sacramentos extends StatelessWidget {
+class solicitud_sacramentos extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         drawer: NavigationDrawerWidget(),
@@ -27,7 +27,8 @@ class sacramentos extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => sacramentos()));
+                                    builder: (context) =>
+                                        solicitud_sacramentos()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
@@ -58,7 +59,8 @@ class sacramentos extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => sacramentos()));
+                                    builder: (context) =>
+                                        solicitud_sacramentos()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
@@ -89,7 +91,8 @@ class sacramentos extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => sacramentos()));
+                                    builder: (context) =>
+                                        solicitud_sacramentos()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
@@ -120,7 +123,8 @@ class sacramentos extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => sacramentos()));
+                                    builder: (context) =>
+                                        solicitud_sacramentos()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
@@ -151,7 +155,8 @@ class sacramentos extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => sacramentos()));
+                                    builder: (context) =>
+                                        solicitud_sacramentos()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
@@ -182,7 +187,8 @@ class sacramentos extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => sacramentos()));
+                                    builder: (context) =>
+                                        solicitud_sacramentos()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
