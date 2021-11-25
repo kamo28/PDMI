@@ -5,9 +5,8 @@ import 'package:pdm/widget/navigation_drawer_widget.dart';
 class solicitud_sacramentos extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
-        drawer: NavigationDrawerWidget(),
         appBar: AppBar(
-          title: Text(MyApp.title),
+          title: Text("Solicitud de Sacramentos"),
         ),
         body: Builder(
             builder: (context) => Center(
