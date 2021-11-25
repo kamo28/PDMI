@@ -55,7 +55,7 @@ class _MainPageState extends State<MainPage> {
                       child: RichText(
                           text: TextSpan(children: [
                         TextSpan(
-                            text: "Sacramentos    ",
+                            text: "Solicitud de Sacramentos    ",
                             style:
                                 TextStyle(fontSize: 34, color: Colors.black)),
                         WidgetSpan(child: Icon(Icons.book, size: 70))
