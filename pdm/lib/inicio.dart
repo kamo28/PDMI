@@ -34,6 +34,7 @@ class _MainPageState extends State<MainPage> {
           builder: (context) => Center(
             child: new Column(
               children: <Widget>[
+                //No funciona, no te lleva a ningún lado
                 Container(
                   margin: EdgeInsets.all(10),
                   height: 200.0,
@@ -95,6 +96,7 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                 ),
+                //No lleva a ninguna pantalla
                 Container(
                   margin: EdgeInsets.all(10),
                   height: 200.0,
