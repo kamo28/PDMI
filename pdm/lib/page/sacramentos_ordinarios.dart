@@ -27,7 +27,7 @@ class sacramentos_ordinarios extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        solicitud_sacramentos()));
+                                        sacramentos_ordinarios()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
