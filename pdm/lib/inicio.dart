@@ -35,7 +35,7 @@ class _MainPageState extends State<MainPage> {
           builder: (context) => Center(
             child: new Column(
               children: <Widget>[
-                //No funciona, no te lleva a ningún lado (borrar cuando se solucione)
+                //Botón de donaciones
                 Container(
                   margin: EdgeInsets.all(10),
                   height: 200.0,
@@ -46,8 +46,11 @@ class _MainPageState extends State<MainPage> {
                         side:
                             BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: () {
-                      MaterialPageRoute(
-                          builder: (context) => sacramentos_ordinarios());
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => sacramentos_ordinarios()),
+                      );
                     },
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
@@ -57,10 +60,10 @@ class _MainPageState extends State<MainPage> {
                       child: RichText(
                           text: TextSpan(children: [
                         TextSpan(
-                            text: "Misas, Confesiones e Intenciones ",
+                            text: "Misas, Confesiones e Intenciones      ",
                             style:
                                 TextStyle(fontSize: 34, color: Colors.black)),
-                        WidgetSpan(child: Icon(Icons.book, size: 70))
+                        WidgetSpan(child: Icon(Icons.monetization_on, size: 70))
                       ])),
                     ),
                   ),
@@ -75,8 +78,11 @@ class _MainPageState extends State<MainPage> {
                         side:
                             BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: () {
-                      MaterialPageRoute(
-                          builder: (context) => solicitud_sacramentos());
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => solicitud_sacramentos()),
+                      );
                     },
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
@@ -86,10 +92,10 @@ class _MainPageState extends State<MainPage> {
                       child: RichText(
                           text: TextSpan(children: [
                         TextSpan(
-                            text: "Solicitud de Sacramentos    ",
+                            text: "Solicitud de Sacramentos      ",
                             style:
                                 TextStyle(fontSize: 34, color: Colors.black)),
-                        WidgetSpan(child: Icon(Icons.book, size: 70))
+                        WidgetSpan(child: Icon(Icons.monetization_on, size: 70))
                       ])),
                     ),
                   ),
