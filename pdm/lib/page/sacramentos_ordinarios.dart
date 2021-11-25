@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class sacramentos extends StatelessWidget {
+class sacramentos_ordinarios extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
