@@ -50,7 +50,7 @@ class _MainPageState extends State<MainPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => solicitud_sacramentos()),
+                            builder: (context) => sacramentos_ordinarios()),
                       );
                     },
                     padding: EdgeInsets.all(10.0),
@@ -61,10 +61,10 @@ class _MainPageState extends State<MainPage> {
                       child: RichText(
                           text: TextSpan(children: [
                         TextSpan(
-                            text: "Misas, Confesiones e Intenciones      ",
+                            text: "Misas, Confesiones \ne Intenciones              ",
                             style:
-                                TextStyle(fontSize: 34, color: Colors.black)),
-                        WidgetSpan(child: Icon(Icons.monetization_on, size: 70))
+                                TextStyle(fontSize: 24, color: Colors.black)),
+                        WidgetSpan(child: Icon(Icons.info, size: 70))
                       ])),
                     ),
                   ),
@@ -93,10 +93,10 @@ class _MainPageState extends State<MainPage> {
                       child: RichText(
                           text: TextSpan(children: [
                         TextSpan(
-                            text: "Solicitud de Sacramentos      ",
+                            text: "Solicitud de \nSacramentos   ",
                             style:
                                 TextStyle(fontSize: 34, color: Colors.black)),
-                        WidgetSpan(child: Icon(Icons.monetization_on, size: 70))
+                        WidgetSpan(child: Icon(Icons.book, size: 70))
                       ])),
                     ),
                   ),

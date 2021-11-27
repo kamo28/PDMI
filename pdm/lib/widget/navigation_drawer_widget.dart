@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pdm/page/donaciones_page.dart';
 import 'package:pdm/page/contacto_page.dart';
 import 'package:pdm/page/user_page.dart';
+import 'package:pdm/inicio.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -32,8 +33,14 @@ class NavigationDrawerWidget extends StatelessWidget {
               padding: padding,
               child: Column(
                 children: [
-                  const SizedBox(height: 12),
-                  buildSearchField(),
+                  /* const SizedBox(height: 12),
+                  buildSearchField(), */
+                  const SizedBox(height: 16),
+                  buildMenuItem(
+                    text: 'Inicio',
+                    icon: Icons.home_filled,
+                    onClicked: () => selectedItem(context, 1),
+                  ),
                   const SizedBox(height: 24),
                   buildMenuItem(
                     text: 'Contacto',
@@ -42,36 +49,10 @@ class NavigationDrawerWidget extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Favourites',
-                    icon: Icons.favorite_border,
-                    onClicked: () => selectedItem(context, 1),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Workflow',
-                    icon: Icons.workspaces_outline,
+                    text: 'Cerrar sesión',
+                    icon: Icons.logout_rounded,
                     onClicked: () => selectedItem(context, 2),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Updates',
-                    icon: Icons.update,
-                    onClicked: () => selectedItem(context, 3),
-                  ),
-                  const SizedBox(height: 24),
-                  Divider(color: Colors.white70),
-                  const SizedBox(height: 24),
-                  buildMenuItem(
-                    text: 'Plugins',
-                    icon: Icons.account_tree_outlined,
-                    onClicked: () => selectedItem(context, 4),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Notifications',
-                    icon: Icons.notifications_outlined,
-                    onClicked: () => selectedItem(context, 5),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -164,15 +145,20 @@ class NavigationDrawerWidget extends StatelessWidget {
     Navigator.of(context).pop();
 
     switch (index) {
+      case 1:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => MyApp(),
+        ));
+        break;
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => ContactoPage(),
         ));
         break;
-      case 1:
-        Navigator.of(context).push(MaterialPageRoute(
+      case 2:
+        /* Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => DonacionesPage(),
-        ));
+        )); */
         break;
     }
   }
