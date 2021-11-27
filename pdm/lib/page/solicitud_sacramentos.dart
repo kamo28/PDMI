@@ -38,10 +38,10 @@ class solicitud_sacramentos extends StatelessWidget {
                             child: RichText(
                                 text: TextSpan(children: [
                               TextSpan(
-                                  text: "Bautismo    ",
+                                  text: "Bautismo         ",
                                   style: TextStyle(
                                       fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.pin_drop, size: 70))
+                              WidgetSpan(child: Icon(Icons.water, size: 70))
                             ])),
                           ),
                         ),
@@ -70,10 +70,10 @@ class solicitud_sacramentos extends StatelessWidget {
                             child: RichText(
                                 text: TextSpan(children: [
                               TextSpan(
-                                  text: "Primera comunión        ",
+                                  text: "Primera\ncomunión        ",
                                   style: TextStyle(
                                       fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.book, size: 70))
+                              WidgetSpan(child: Icon(Icons.breakfast_dining_rounded, size: 70))
                             ])),
                           ),
                         ),
@@ -102,10 +102,10 @@ class solicitud_sacramentos extends StatelessWidget {
                             child: RichText(
                                 text: TextSpan(children: [
                               TextSpan(
-                                  text: "Matrimonio        ",
+                                  text: "Matrimonio     ",
                                   style: TextStyle(
                                       fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.book, size: 70))
+                              WidgetSpan(child: Icon(Icons.group_rounded, size: 70))
                             ])),
                           ),
                         ),

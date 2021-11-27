@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../PaypalPayment.dart';
-import '../PaypalServices.dart';
 
 class DonacionesPage extends StatelessWidget {
   @override
@@ -43,7 +41,7 @@ class DonacionesPage extends StatelessWidget {
                       side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
                     ),
                     onPressed: () {
-                      Navigator.of(context).push(
+                      /* Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (BuildContext context) => PaypalPayment(
                           onFinish: (number) async {
@@ -52,7 +50,7 @@ class DonacionesPage extends StatelessWidget {
                           },
                         ),
                       ),
-                    );
+                    ); */
                     },
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
@@ -74,7 +72,7 @@ class DonacionesPage extends StatelessWidget {
                       side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
                     ),
                     onPressed: () {
-                      Navigator.of(context).push(
+                      /* Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (BuildContext context) => PaypalPayment(
                           onFinish: (number) async {
@@ -83,7 +81,7 @@ class DonacionesPage extends StatelessWidget {
                           },
                         ),
                       ),
-                    );
+                    ); */
                     },
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
@@ -105,7 +103,7 @@ class DonacionesPage extends StatelessWidget {
                       side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
                     ),
                     onPressed: () {
-                      Navigator.of(context).push(
+                      /* Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (BuildContext context) => PaypalPayment(
                           onFinish: (number) async {
@@ -114,7 +112,7 @@ class DonacionesPage extends StatelessWidget {
                           },
                         ),
                       ),
-                    );
+                    ); */
                     },
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,

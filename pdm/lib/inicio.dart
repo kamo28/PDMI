@@ -4,6 +4,7 @@ import 'package:pdm/page/donaciones_page.dart';
 import 'package:pdm/page/solicitud_sacramentos.dart';
 import 'package:pdm/widget/button_widget.dart';
 import 'package:pdm/widget/navigation_drawer_widget.dart';
+import 'page/solicitud_sacramentos.dart';
 
 class MyApp extends StatelessWidget {
   static final String title = 'Inicio';
@@ -44,8 +45,11 @@ class _MainPageState extends State<MainPage> {
                         side:
                             BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: () {
-                      MaterialPageRoute(
-                          builder: (context) => solicitud_sacramentos());
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => solicitud_sacramentos()),
+                      );
                     },
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
