@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pdm/inicio.dart';
-import 'package:pdm/widget/navigation_drawer_widget.dart';
+import 'package:pdm/page/solicitud_sacramentos.dart';
 
-class solicitud_sacramentos extends StatelessWidget {
+class sacramentos_ordinarios extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -27,7 +27,7 @@ class solicitud_sacramentos extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        solicitud_sacramentos()));
+                                        sacramentos_ordinarios()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
@@ -37,10 +37,10 @@ class solicitud_sacramentos extends StatelessWidget {
                             child: RichText(
                                 text: TextSpan(children: [
                               TextSpan(
-                                  text: "Bautismo         ",
+                                  text: "Examen de conciencia    ",
                                   style: TextStyle(
                                       fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.water, size: 70))
+                              WidgetSpan(child: Icon(Icons.pin_drop, size: 70))
                             ])),
                           ),
                         ),
@@ -59,7 +59,7 @@ class solicitud_sacramentos extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        solicitud_sacramentos()));
+                                        sacramentos_ordinarios()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
@@ -69,42 +69,10 @@ class solicitud_sacramentos extends StatelessWidget {
                             child: RichText(
                                 text: TextSpan(children: [
                               TextSpan(
-                                  text: "Primera\ncomunión        ",
+                                  text: "Intenciones \nde misa        ",
                                   style: TextStyle(
                                       fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.breakfast_dining_rounded, size: 70))
-                            ])),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        height: 200.0,
-                        width: 340,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(
-                                  color: Color.fromRGBO(0, 160, 227, 1))),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        solicitud_sacramentos()));
-                          },
-                          padding: EdgeInsets.all(10.0),
-                          color: Colors.white38,
-                          textColor: Colors.black,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: RichText(
-                                text: TextSpan(children: [
-                              TextSpan(
-                                  text: "Matrimonio     ",
-                                  style: TextStyle(
-                                      fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.group_rounded, size: 70))
+                              WidgetSpan(child: Icon(Icons.book, size: 70))
                             ])),
                           ),
                         ),
