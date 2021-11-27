@@ -50,11 +50,7 @@ class _MainPageState extends State<MainPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-<<<<<<< HEAD
                             builder: (context) => solicitud_sacramentos()),
-=======
-                            builder: (context) => sacramentos_ordinarios()),
->>>>>>> 9922aab86822ac5d55930ba8b35922050eced1b5
                       );
                     },
                     padding: EdgeInsets.all(10.0),
