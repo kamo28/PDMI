@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:pdm/widget/button_widget.dart';
 import 'package:pdm/widget/navigation_drawer_widget.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 class ContactoPage extends StatelessWidget {
   static final String title = 'ContactoPageen de conciencia';
@@ -78,6 +79,14 @@ class _ContactoState extends State<Contacto>{
     }
   }
 
+  openURL() async {
+    if(await canLaunch("https://www.facebook.com/aritooka99")){
+      await launch("https://www.facebook.com/aritooka99");
+    }else{
+      throw "Error al redirigir a Facebook";
+    }
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         drawer: NavigationDrawerWidget(),
@@ -90,9 +99,12 @@ class _ContactoState extends State<Contacto>{
           builder: (context) => Center(
             child: new Column(
               children: <Widget>[
+                Container(
+                  height: 75,
+                ),
                 Container(  ///////////////////////////////////////////////////////////
                   margin: EdgeInsets.all(10),
-                  height: 100.0,
+                  height: 75.0,
                   width: 250,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
@@ -119,7 +131,7 @@ class _ContactoState extends State<Contacto>{
                 ),
                 Container(  ///////////////////////////////////////////////////////////
                   margin: EdgeInsets.all(10),
-                  height: 100.0,
+                  height: 75.0,
                   width: 250,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
@@ -150,7 +162,7 @@ class _ContactoState extends State<Contacto>{
                 ),
                 Container(  ///////////////////////////////////////////////////////////
                   margin: EdgeInsets.all(10),
-                  height: 100.0,
+                  height: 75.0,
                   width: 250,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
@@ -179,6 +191,20 @@ class _ContactoState extends State<Contacto>{
                       ),
                   ),
                 ),
+                Container(height: 10,),
+                SignInButton(
+                  Buttons.Facebook, 
+                  padding: EdgeInsets.all(19),
+                  onPressed: (){
+                    openURL();
+                  }
+                ),
+                Container(height: 10,),
+                SignInButton(
+                  Buttons.Twitter, 
+                  padding: EdgeInsets.all(19),
+                  onPressed: (){}
+                )
               ],
             ),
           ),

@@ -30,9 +30,8 @@ class _ExamenConcienciaState extends State<ExamenConciencia> {
         appBar: AppBar(
           title: Text(Exam.title),
         ),
-        body: Builder(
-          builder: (context) => Center(
-            child: new Column(
+        body: SingleChildScrollView(
+            child: Column(
               children: <Widget>[
                 //Botón de donaciones
                 Container(
@@ -85,7 +84,6 @@ class _ExamenConcienciaState extends State<ExamenConciencia> {
                 ),
               ],
             ),
-          ),
-        ),
+        )
       );
 }
