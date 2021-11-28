@@ -1,9 +1,28 @@
-import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_sms/flutter_sms.dart';
 import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:pdm/widget/button_widget.dart';
+import 'package:pdm/widget/navigation_drawer_widget.dart';
 
 class ContactoPage extends StatelessWidget {
+  static final String title = 'ContactoPageen de conciencia';
+
+  @override
+  Widget build(BuildContext context) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: title,
+        theme: ThemeData(primarySwatch: Colors.red),
+        home: Contacto(),
+      );
+}
+
+class Contacto extends StatefulWidget {
+  @override
+  _ContactoState createState() => _ContactoState();
+}
+
+class _ContactoState extends State<Contacto>{
   enviarSMS(String msj, List<String> d) async {
     String r = await sendSMS(message: msj, recipients: d).catchError((onError) {
       print(onError);
@@ -59,10 +78,9 @@ class ContactoPage extends StatelessWidget {
     }
   }
 
-
   @override
   Widget build(BuildContext context) => Scaffold(
-        //drawer: NavigationDrawerWidget(),
+        drawer: NavigationDrawerWidget(),
         appBar: AppBar(
           title: Text('Contacto'),
           centerTitle: true,
@@ -166,4 +184,5 @@ class ContactoPage extends StatelessWidget {
           ),
         )
       );
+
 }
