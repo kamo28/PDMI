@@ -119,11 +119,12 @@ class _IntencionesMisaState extends State<IntencionesMisa> {
                     //Divider(),
                     //child: SizedBox(height: 10),
                     padding: EdgeInsets.all(10.0),
-                    child: ElevatedButton(onPressed: _showDatePicker, child: Text("Select date"))
+                    child: ElevatedButton(onPressed: _showDatePicker, child: Text("Seleccionar fecha"))
                   )
                 )
              ],
           ),
+          Text("$_dateTime".toString()),
           //espacio 
           Row(
             children: [
@@ -247,7 +248,7 @@ class _IntencionesMisaState extends State<IntencionesMisa> {
             children: [
               ElevatedButton(
                 onPressed: (){},
-                child: const Text("Registrame!"), 
+                child: const Text("Enviar datos"), 
               )
             ],
           )

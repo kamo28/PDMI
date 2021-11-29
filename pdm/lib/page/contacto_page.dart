@@ -79,12 +79,14 @@ class _ContactoState extends State<Contacto>{
     }
   }
 
-  openURL() async {
-    if(await canLaunch("https://www.facebook.com/aritooka99")){
-      await launch("https://www.facebook.com/aritooka99");
-    }else{
-      throw "Error al redirigir a Facebook";
-    }
+  openURLFace(){
+    String url_face = "https://www.facebook.com/aritooka99";
+    launch(url_face);
+  }
+
+  openURLTwitter(){
+    String url_twitter = "https://twitter.com/ElKamoOficial";
+    launch(url_twitter);
   }
 
   @override
@@ -196,14 +198,16 @@ class _ContactoState extends State<Contacto>{
                   Buttons.Facebook, 
                   padding: EdgeInsets.all(19),
                   onPressed: (){
-                    openURL();
+                    openURLFace();
                   }
                 ),
-                Container(height: 10,),
+                Container(height: 20,),
                 SignInButton(
                   Buttons.Twitter, 
                   padding: EdgeInsets.all(19),
-                  onPressed: (){}
+                  onPressed: (){
+                    openURLTwitter();
+                  }
                 )
               ],
             ),
