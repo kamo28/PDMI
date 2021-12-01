@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pdm/inicio.dart';
 import 'package:pdm/page/formulario_bautismo.dart';
+import 'package:pdm/page/formulario_matrimonio.dart';
+import 'package:pdm/page/formulario_primeracomunion.dart';
 import 'package:pdm/widget/navigation_drawer_widget.dart';
 
 class solicitud_sacramentos extends StatelessWidget {
@@ -60,7 +62,7 @@ class solicitud_sacramentos extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        solicitud_sacramentos()));
+                                        formulario_primeracomunion()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
@@ -94,7 +96,7 @@ class solicitud_sacramentos extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        solicitud_sacramentos()));
+                                        formulario_matrimonio()));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class formulario_bautismo extends StatelessWidget {
+class formulario_primeracomunion extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text("Bautismo"),
+          title: Text("Primera Comunión"),
         ),
         body: Builder(
             builder: (context) => Center(
