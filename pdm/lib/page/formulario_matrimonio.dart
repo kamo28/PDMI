@@ -5,75 +5,120 @@ class formulario_matrimonio extends StatelessWidget {
         appBar: AppBar(
           title: Text("Matrimonio"),
         ),
-        body: Builder(
-            builder: (context) => Center(
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Fecha de matrimonio'),
-                          TextField(keyboardType: TextInputType.datetime)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Nombre del conyuge'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Apellido del conyuge'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Nombre del primer testigo'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Nombre del segundo testigo'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Nombre del tercer testigo'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Nombre del cuarto testigo'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Diocesis'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Parroquia'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                    ],
-                  ),
-                )),
+        body: SingleChildScrollView(
+            child: Center(
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Fecha de matrimonio"),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.datetime,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Nombre del conyuge"),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Apellido del conyuge"),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('Nombre del primer testigo'),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('Nombre del segundo testigo'),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('Nombre del tercer testigo'),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('Nombre del cuarto testigo'),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Diocesis"),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.text,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Parroquia"),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.text,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+            ],
+          ),
+        )),
       );
 }

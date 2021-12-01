@@ -5,54 +5,84 @@ class formulario_primeracomunion extends StatelessWidget {
         appBar: AppBar(
           title: Text("Primera Comunión"),
         ),
-        body: Builder(
-            builder: (context) => Center(
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Fecha de primera comunión'),
-                          TextField(keyboardType: TextInputType.datetime)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Nombre del padrino'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Nombre de la madrina'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Persona beneficiada'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Diocesis'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('Parroquia'),
-                          TextField(keyboardType: TextInputType.text)
-                        ],
-                      ),
-                    ],
-                  ),
-                )),
+        body: SingleChildScrollView(
+            child: Center(
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Fecha de primera comunión"),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.datetime,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Nombre del padrino"),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Nombre de la madrina"),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('Nombre de la persona beneficiada'),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Diocesis"),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.text,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text("Parroquia"),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  autofocus: true,
+                  keyboardType: TextInputType.text,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+            ],
+          ),
+        )),
       );
 }
