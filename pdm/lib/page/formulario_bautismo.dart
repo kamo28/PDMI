@@ -7,43 +7,42 @@ class formulario_bautismo extends StatelessWidget {
         ),
         body: Builder(
             builder: (context) => Center(
-                  child: new Column(
+                  child: Column(
                     children: <Widget>[
-                      Text('Fecha de bautismo'),
-                      TextField(
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text('Fecha de bautismo'),
+                          TextField(keyboardType: TextInputType.datetime)
+                        ],
                       ),
-                      Text('Ministro'),
-                      TextField(
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text('Ministro'),
+                          TextField(keyboardType: TextInputType.text)
+                        ],
                       ),
-                      Text('Nombre del beneficiado'),
-                      TextField(
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text('Nombre del beneficiado'),
+                          TextField(keyboardType: TextInputType.text)
+                        ],
                       ),
-                      Text('Nombre del beneficiado'),
-                      TextField(
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text('Diocesis'),
+                          TextField(keyboardType: TextInputType.text)
+                        ],
                       ),
-                      Text('Diocesis'),
-                      TextField(
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                        ),
-                      ),
-                      Text('Parroquia'),
-                      TextField(
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text('Parroquia'),
+                          TextField(keyboardType: TextInputType.text)
+                        ],
                       ),
                     ],
                   ),
