@@ -117,6 +117,33 @@ class formulario_matrimonio extends StatelessWidget {
                   decoration: InputDecoration(border: OutlineInputBorder()),
                 ),
               ),
+              Container(
+                margin: EdgeInsets.all(10),
+                width: 150,
+                child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => formulario_matrimonio()));
+                  },
+                  padding: EdgeInsets.all(10.0),
+                  color: Colors.white38,
+                  textColor: Colors.black,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: RichText(
+                        text: TextSpan(children: [
+                      TextSpan(
+                          text: "Enviar datos",
+                          style: TextStyle(fontSize: 20, color: Colors.black)),
+                    ])),
+                  ),
+                ),
+              ),
             ],
           ),
         )),
