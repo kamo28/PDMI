@@ -5,6 +5,7 @@ import 'package:pdm/page/solicitud_sacramentos.dart';
 import 'page/sacramentos_ordinarios.dart';
 import 'package:pdm/widget/button_widget.dart';
 import 'package:pdm/widget/navigation_drawer_widget.dart';
+import 'page/solicitud_sacramentos.dart';
 
 class MyApp extends StatelessWidget {
   static final String title = 'Inicio';
@@ -60,10 +61,10 @@ class _MainPageState extends State<MainPage> {
                       child: RichText(
                           text: TextSpan(children: [
                         TextSpan(
-                            text: "Misas, Confesiones e Intenciones      ",
+                            text: "Misas, Confesiones \ne Intenciones              ",
                             style:
-                                TextStyle(fontSize: 34, color: Colors.black)),
-                        WidgetSpan(child: Icon(Icons.monetization_on, size: 70))
+                                TextStyle(fontSize: 24, color: Colors.black)),
+                        WidgetSpan(child: Icon(Icons.info, size: 70))
                       ])),
                     ),
                   ),
@@ -92,10 +93,10 @@ class _MainPageState extends State<MainPage> {
                       child: RichText(
                           text: TextSpan(children: [
                         TextSpan(
-                            text: "Solicitud de Sacramentos      ",
+                            text: "Solicitud de \nSacramentos   ",
                             style:
                                 TextStyle(fontSize: 34, color: Colors.black)),
-                        WidgetSpan(child: Icon(Icons.monetization_on, size: 70))
+                        WidgetSpan(child: Icon(Icons.book, size: 70))
                       ])),
                     ),
                   ),
