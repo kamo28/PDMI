@@ -89,6 +89,22 @@ class _ContactoState extends State<Contacto>{
     launch(url_twitter);
   }
 
+  openURLYT(){
+    launch('https://www.youtube.com/ParroquiaSedesSapientiae ');
+  }
+
+  Future launchEmail({
+    required String toEmail,
+    required String subject,
+    required String message,
+  }) async {
+    final url = 
+    'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull(message)}';
+    if(await canLaunch(url)){
+      await launch(url);
+    }
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         drawer: NavigationDrawerWidget(),
@@ -102,7 +118,7 @@ class _ContactoState extends State<Contacto>{
             child: new Column(
               children: <Widget>[
                 Container(
-                  height: 75,
+                  height: 30,
                 ),
                 Container(  ///////////////////////////////////////////////////////////
                   margin: EdgeInsets.all(10),
@@ -193,20 +209,73 @@ class _ContactoState extends State<Contacto>{
                       ),
                   ),
                 ),
+                Container(  ///////////////////////////////////////////////////////////
+                  margin: EdgeInsets.all(10),
+                  height: 75.0,
+                  width: 250,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
+                    ),
+                    onPressed: () => launchEmail(
+                    toEmail: "parroquia_sedes@arcol.org",
+                    subject: "Informes de sacrametos",
+                    message: ""
+                  ),
+                    padding: EdgeInsets.all(10.0),
+                    color: Colors.white38,
+                    textColor: Colors.black,
+                    child: 
+                      Align(
+                        alignment: Alignment.centerLeft, 
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(text: "Mail               ", style: TextStyle(fontSize: 26, color: Colors.black)),
+                              WidgetSpan(child: Icon(Icons.mail, size: 55))
+                            ]
+                          )
+                        ),
+                      ),
+                  ),
+                ),
+                Container(  ///////////////////////////////////////////////////////////
+                  margin: EdgeInsets.all(10),
+                  height: 75.0,
+                  width: 250,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
+                    ),
+                    onPressed: () {
+                      openURLYT();
+                    },
+                    padding: EdgeInsets.all(10.0),
+                    color: Colors.white38,
+                    textColor: Colors.black,
+                    child: 
+                      Align(
+                        alignment: Alignment.centerLeft, 
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(text: "YouTube       ", style: TextStyle(fontSize: 26, color: Colors.black)),
+                              WidgetSpan(child: Icon(Icons.video_camera_back, size: 55))
+                            ]
+                          )
+                        ),
+                      ),
+                  ),
+                ),
                 Container(height: 10,),
                 SignInButton(
                   Buttons.Facebook, 
+                  text: "¡Síganos en Facebook!",
                   padding: EdgeInsets.all(19),
                   onPressed: (){
                     openURLFace();
-                  }
-                ),
-                Container(height: 20,),
-                SignInButton(
-                  Buttons.Twitter, 
-                  padding: EdgeInsets.all(19),
-                  onPressed: (){
-                    openURLTwitter();
                   }
                 )
               ],

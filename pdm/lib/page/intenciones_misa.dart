@@ -9,17 +9,6 @@ import 'package:pdm/widget/button_widget.dart';
 import 'package:pdm/widget/navigation_drawer_widget.dart';
 import 'package:pdm/page/sacramentos_ordinarios.dart';
 
-/* class Intenciones extends StatelessWidget {
-  static final String title = 'Intenciones';
-  @override
-  Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: title,
-        theme: ThemeData(primarySwatch: Colors.red),
-        home: IntencionesMisa(),
-      );
-} */
-
 class IntencionesMisa extends StatefulWidget {
   IntencionesMisa({Key? key, required this.db}) : super(key: key);
   DatabaseI db;
