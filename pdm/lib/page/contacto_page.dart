@@ -80,7 +80,7 @@ class _ContactoState extends State<Contacto>{
   }
 
   openURLFace(){
-    String url_face = "https://www.facebook.com/aritooka99";
+    String url_face = "https://m.facebook.com/Parroquia-Sedes-Sapientiae-420417491376002/";
     launch(url_face);
   }
 
@@ -100,9 +100,7 @@ class _ContactoState extends State<Contacto>{
   }) async {
     final url = 
     'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull(message)}';
-    if(await canLaunch(url)){
       await launch(url);
-    }
   }
 
   @override
@@ -219,10 +217,10 @@ class _ContactoState extends State<Contacto>{
                       side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
                     ),
                     onPressed: () => launchEmail(
-                    toEmail: "parroquia_sedes@arcol.org",
-                    subject: "Informes de sacrametos",
-                    message: ""
-                  ),
+                      toEmail: "parroquia_sedes@arcol.org",
+                      subject: "Informes de sacrametos",
+                      message: "Hola"
+                    ),
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
                     textColor: Colors.black,
