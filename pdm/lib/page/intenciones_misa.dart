@@ -1,28 +1,27 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:pdm/colecciones/database_intenciones.dart';
+import 'package:pdm/colecciones/database_intenciones.dart';
 import 'package:pdm/widget/button_widget.dart';
 import 'package:pdm/widget/navigation_drawer_widget.dart';
-
-class Intenciones extends StatelessWidget {
-  static final String title = 'Intenciones';
-
-  @override
-  Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: title,
-        theme: ThemeData(primarySwatch: Colors.red),
-        home: IntencionesMisa(),
-      );
-}
+import 'package:pdm/page/sacramentos_ordinarios.dart';
 
 class IntencionesMisa extends StatefulWidget {
+  IntencionesMisa({Key? key, required this.db}) : super(key: key);
+  DatabaseI db;
   @override
   _IntencionesMisaState createState() => _IntencionesMisaState();
 }
 
 class _IntencionesMisaState extends State<IntencionesMisa> {
-  final TextEditingController usuarioController = TextEditingController();
-  final TextEditingController correoController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  TextEditingController _personaController = new TextEditingController();
+  @override
+  void initState() {
+    super.initState();
+  }
 
   DateTime _dateTime = DateTime.now();
 
@@ -30,8 +29,6 @@ class _IntencionesMisaState extends State<IntencionesMisa> {
   String? valor_horario;
   final parroquias = ['Sedes', 'Santa Teresa', 'San Mateo'];
   String? valor_parroquia;
-
-  final TextEditingController persona = TextEditingController();
 
   void _showDatePicker(){
     showDatePicker(
@@ -59,7 +56,7 @@ class _IntencionesMisaState extends State<IntencionesMisa> {
     return Scaffold(
       drawer: NavigationDrawerWidget(),
       appBar: AppBar(
-        title: Text(Intenciones.title),
+        title: Text("Intenciones"),
       ),
       body: SingleChildScrollView(child:Column(
         children: [
@@ -119,11 +116,12 @@ class _IntencionesMisaState extends State<IntencionesMisa> {
                     //Divider(),
                     //child: SizedBox(height: 10),
                     padding: EdgeInsets.all(10.0),
-                    child: ElevatedButton(onPressed: _showDatePicker, child: Text("Select date"))
+                    child: ElevatedButton(onPressed: _showDatePicker, child: Text("Seleccionar fecha"))
                   )
                 )
              ],
           ),
+          Text("$_dateTime".toString()),
           //espacio 
           Row(
             children: [
@@ -227,7 +225,7 @@ class _IntencionesMisaState extends State<IntencionesMisa> {
             mainAxisAlignment: MainAxisAlignment.center,
              children: [
                Expanded(child: TextField(
-                 controller: usuarioController,
+                 controller: _personaController,
                  decoration: const InputDecoration(
                    border: OutlineInputBorder(
                      borderSide: BorderSide(color: Colors.blue, width: 2.0)
@@ -246,8 +244,15 @@ class _IntencionesMisaState extends State<IntencionesMisa> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
-                onPressed: (){},
-                child: const Text("Registrame!"), 
+                onPressed: (){
+                  widget.db.create("$_dateTime".toString(), "$valor_horario".toString(), "$valor_parroquia".toString(), _personaController.text);
+                  Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        sacramentos_ordinarios()));
+                },
+                child: const Text("Enviar datos"), 
               )
             ],
           )

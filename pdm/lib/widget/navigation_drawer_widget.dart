@@ -18,23 +18,10 @@ class NavigationDrawerWidget extends StatelessWidget {
         color: Color.fromRGBO(50, 75, 205, 1),
         child: ListView(
           children: <Widget>[
-            buildHeader(
-              urlImage: urlImage,
-              name: name,
-              email: email,
-              onClicked: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => UserPage(
-                  name: 'Sarah Abs',
-                  urlImage: urlImage,
-                ),
-              )),
-            ),
             Container(
               padding: padding,
               child: Column(
                 children: [
-                  /* const SizedBox(height: 12),
-                  buildSearchField(), */
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Inicio',

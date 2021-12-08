@@ -1,12 +1,39 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:pdm/colecciones/database_intenciones.dart';
 import 'package:pdm/inicio.dart';
 import 'package:pdm/page/solicitud_sacramentos.dart';
 import 'package:pdm/page/horarios.dart';
 import 'package:pdm/page/examen.dart';
 import 'package:pdm/page/intenciones_misa.dart';
 
-class sacramentos_ordinarios extends StatelessWidget {
+class sacramentos_ordinarios extends StatefulWidget {
+  const sacramentos_ordinarios({ Key? key }) : super(key: key);
+
   @override
+  _sacramentos_ordinariosState createState() => _sacramentos_ordinariosState();
+}
+
+class _sacramentos_ordinariosState extends State<sacramentos_ordinarios> {
+  late DatabaseI db;
+  List docs = [];
+  initialise() {
+    db = DatabaseI();
+    db.initiliase();
+    db.read().then((value) => {
+          setState(() {
+            docs = value;
+          })
+        });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    initialise();
+  }
+
+ @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: Text("Solicitud de Sacramentos"),
@@ -62,7 +89,7 @@ class sacramentos_ordinarios extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        Intenciones()));
+                                        IntencionesMisa(db: db)));
                           },
                           padding: EdgeInsets.all(10.0),
                           color: Colors.white38,
