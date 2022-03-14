@@ -8,7 +8,7 @@ import 'package:pdm/page/examen.dart';
 import 'package:pdm/page/intenciones_misa.dart';
 
 class sacramentos_ordinarios extends StatefulWidget {
-  const sacramentos_ordinarios({ Key? key }) : super(key: key);
+  const sacramentos_ordinarios({Key? key}) : super(key: key);
 
   @override
   _sacramentos_ordinariosState createState() => _sacramentos_ordinariosState();
@@ -33,7 +33,7 @@ class _sacramentos_ordinariosState extends State<sacramentos_ordinarios> {
     initialise();
   }
 
- @override
+  @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: Text("Solicitud de Sacramentos"),
@@ -43,100 +43,111 @@ class _sacramentos_ordinariosState extends State<sacramentos_ordinarios> {
                   child: new Column(
                     children: <Widget>[
                       //Botón
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        height: 200.0,
-                        width: 340,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(
-                                  color: Color.fromRGBO(0, 160, 227, 1))),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        Exam()));
-                          },
-                          padding: EdgeInsets.all(10.0),
-                          color: Colors.white38,
-                          textColor: Colors.black,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: RichText(
-                                text: TextSpan(children: [
-                              TextSpan(
-                                  text: "Examen de conciencia       ",
-                                  style: TextStyle(
-                                      fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.checklist_rounded, size: 70))
-                            ])),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200.0,
+                          width: 340,
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                    color: Color.fromRGBO(0, 160, 227, 1))),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Exam()));
+                            },
+                            padding: EdgeInsets.all(10.0),
+                            color: Colors.white38,
+                            textColor: Colors.black,
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: RichText(
+                                  text: TextSpan(children: [
+                                TextSpan(
+                                    text: "Examen de conciencia       ",
+                                    style: TextStyle(
+                                        fontSize: 34, color: Colors.black)),
+                                WidgetSpan(
+                                    child:
+                                        Icon(Icons.checklist_rounded, size: 70))
+                              ])),
+                            ),
                           ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        height: 200.0,
-                        width: 340,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(
-                                  color: Color.fromRGBO(0, 160, 227, 1))),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        IntencionesMisa(db: db)));
-                          },
-                          padding: EdgeInsets.all(10.0),
-                          color: Colors.white38,
-                          textColor: Colors.black,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: RichText(
-                                text: TextSpan(children: [
-                              TextSpan(
-                                  text: "Intenciones \nde misa            ",
-                                  style: TextStyle(
-                                      fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.settings_accessibility_rounded, size: 70))
-                            ])),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200.0,
+                          width: 340,
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                    color: Color.fromRGBO(0, 160, 227, 1))),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          IntencionesMisa(db: db)));
+                            },
+                            padding: EdgeInsets.all(10.0),
+                            color: Colors.white38,
+                            textColor: Colors.black,
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: RichText(
+                                  text: TextSpan(children: [
+                                TextSpan(
+                                    text: "Intenciones \nde misa            ",
+                                    style: TextStyle(
+                                        fontSize: 34, color: Colors.black)),
+                                WidgetSpan(
+                                    child: Icon(
+                                        Icons.settings_accessibility_rounded,
+                                        size: 70))
+                              ])),
+                            ),
                           ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        height: 200.0,
-                        width: 340,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(
-                                  color: Color.fromRGBO(0, 160, 227, 1))),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        Horarios())
-                                        );
-                          },
-                          padding: EdgeInsets.all(10.0),
-                          color: Colors.white38,
-                          textColor: Colors.black,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: RichText(
-                                text: TextSpan(children: [
-                              TextSpan(
-                                  text: "Horarios \nde misa                    ",
-                                  style: TextStyle(
-                                      fontSize: 26, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.schedule_rounded, size: 70))
-                            ])),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200.0,
+                          width: 340,
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                    color: Color.fromRGBO(0, 160, 227, 1))),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Horarios()));
+                            },
+                            padding: EdgeInsets.all(10.0),
+                            color: Colors.white38,
+                            textColor: Colors.black,
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: RichText(
+                                  text: TextSpan(children: [
+                                TextSpan(
+                                    text:
+                                        "Horarios \nde misa                    ",
+                                    style: TextStyle(
+                                        fontSize: 26, color: Colors.black)),
+                                WidgetSpan(
+                                    child:
+                                        Icon(Icons.schedule_rounded, size: 70))
+                              ])),
+                            ),
                           ),
                         ),
                       )

@@ -9,7 +9,7 @@ import 'package:pdm/colecciones/database_comunion.dart';
 import 'package:pdm/colecciones/database_matrimonio.dart';
 
 class solicitud_sacramentos extends StatefulWidget {
-  const solicitud_sacramentos({ Key? key }) : super(key: key);
+  const solicitud_sacramentos({Key? key}) : super(key: key);
 
   @override
   _solicitud_sacramentosState createState() => _solicitud_sacramentosState();
@@ -46,14 +46,12 @@ class _solicitud_sacramentosState extends State<solicitud_sacramentos> {
         });
   }
 
-
-
   @override
   void initState() {
     super.initState();
     initialise();
   }
-  
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -63,106 +61,112 @@ class _solicitud_sacramentosState extends State<solicitud_sacramentos> {
             builder: (context) => Center(
                   child: new Column(
                     children: <Widget>[
-                      //Botón
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        height: 200.0,
-                        width: 340,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(
-                                  color: Color.fromRGBO(0, 160, 227, 1))),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        formulario_bautismo(db: db1)));
-                          },
-                          padding: EdgeInsets.all(10.0),
-                          color: Colors.white38,
-                          textColor: Colors.black,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: RichText(
-                                text: TextSpan(children: [
-                              TextSpan(
-                                  text: "Bautismo         ",
-                                  style: TextStyle(
-                                      fontSize: 34, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.water, size: 70))
-                            ])),
+                      Expanded(
+                        //Botón
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200.0,
+                          width: 340,
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                    color: Color.fromRGBO(0, 160, 227, 1))),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          formulario_bautismo(db: db1)));
+                            },
+                            padding: EdgeInsets.all(10.0),
+                            color: Colors.white38,
+                            textColor: Colors.black,
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: RichText(
+                                  text: TextSpan(children: [
+                                TextSpan(
+                                    text: "Bautismo         ",
+                                    style: TextStyle(
+                                        fontSize: 34, color: Colors.black)),
+                                WidgetSpan(child: Icon(Icons.water, size: 70))
+                              ])),
+                            ),
                           ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        height: 200.0,
-                        width: 340,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(
-                                  color: Color.fromRGBO(0, 160, 227, 1))),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        formulario_primeracomunion(db: db2)));
-                          },
-                          padding: EdgeInsets.all(10.0),
-                          color: Colors.white38,
-                          textColor: Colors.black,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: RichText(
-                                text: TextSpan(children: [
-                              TextSpan(
-                                  text: "Primera\ncomunión        ",
-                                  style: TextStyle(
-                                      fontSize: 34, color: Colors.black)),
-                              WidgetSpan(
-                                  child: Icon(Icons.breakfast_dining_rounded,
-                                      size: 70))
-                            ])),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200.0,
+                          width: 340,
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                    color: Color.fromRGBO(0, 160, 227, 1))),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          formulario_primeracomunion(db: db2)));
+                            },
+                            padding: EdgeInsets.all(10.0),
+                            color: Colors.white38,
+                            textColor: Colors.black,
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: RichText(
+                                  text: TextSpan(children: [
+                                TextSpan(
+                                    text: "Primera\ncomunión        ",
+                                    style: TextStyle(
+                                        fontSize: 34, color: Colors.black)),
+                                WidgetSpan(
+                                    child: Icon(Icons.breakfast_dining_rounded,
+                                        size: 70))
+                              ])),
+                            ),
                           ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        height: 200.0,
-                        width: 340,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(
-                                  color: Color.fromRGBO(0, 160, 227, 1))),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        formulario_matrimonio(db: db3)));
-                          },
-                          padding: EdgeInsets.all(10.0),
-                          color: Colors.white38,
-                          textColor: Colors.black,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: RichText(
-                                text: TextSpan(children: [
-                              TextSpan(
-                                  text: "Matrimonio     ",
-                                  style: TextStyle(
-                                      fontSize: 34, color: Colors.black)),
-                              WidgetSpan(
-                                  child: Icon(Icons.group_rounded, size: 70))
-                            ])),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200.0,
+                          width: 340,
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                    color: Color.fromRGBO(0, 160, 227, 1))),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          formulario_matrimonio(db: db3)));
+                            },
+                            padding: EdgeInsets.all(10.0),
+                            color: Colors.white38,
+                            textColor: Colors.black,
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: RichText(
+                                  text: TextSpan(children: [
+                                TextSpan(
+                                    text: "Matrimonio     ",
+                                    style: TextStyle(
+                                        fontSize: 34, color: Colors.black)),
+                                WidgetSpan(
+                                    child: Icon(Icons.group_rounded, size: 70))
+                              ])),
+                            ),
                           ),
                         ),
-                      ),
+                      )
                     ],
                   ),
                 )),

@@ -23,7 +23,7 @@ class Contacto extends StatefulWidget {
   _ContactoState createState() => _ContactoState();
 }
 
-class _ContactoState extends State<Contacto>{
+class _ContactoState extends State<Contacto> {
   enviarSMS(String msj, List<String> d) async {
     String r = await sendSMS(message: msj, recipients: d).catchError((onError) {
       print(onError);
@@ -35,7 +35,7 @@ class _ContactoState extends State<Contacto>{
     const url = 'tel:+525587920511';
     if (await canLaunch(url)) {
       await launch(url);
-    }else{
+    } else {
       throw 'error al llamar la $url';
     }
   }
@@ -52,9 +52,7 @@ class _ContactoState extends State<Contacto>{
       } else {
         try {
           launch(whatappURL_ios, forceSafariVC: false);
-        }
-        catch (e)
-        {
+        } catch (e) {
           print(e);
           print("WhatsApp no instalado");
           // although the exception occurs, this never happens, and I would rather catch the exact canLaunch exception
@@ -68,9 +66,7 @@ class _ContactoState extends State<Contacto>{
       } else {
         try {
           launch(whatsappURl_android);
-        }
-        catch (e)
-        {
+        } catch (e) {
           print(e);
           print("WhatsApp no instalado");
           // although the exception occurs, this never happens, and I would rather catch the exact canLaunch exception
@@ -79,17 +75,18 @@ class _ContactoState extends State<Contacto>{
     }
   }
 
-  openURLFace(){
-    String url_face = "https://m.facebook.com/Parroquia-Sedes-Sapientiae-420417491376002/";
+  openURLFace() {
+    String url_face =
+        "https://m.facebook.com/Parroquia-Sedes-Sapientiae-420417491376002/";
     launch(url_face);
   }
 
-  openURLTwitter(){
+  openURLTwitter() {
     String url_twitter = "https://twitter.com/ElKamoOficial";
     launch(url_twitter);
   }
 
-  openURLYT(){
+  openURLYT() {
     launch('https://www.youtube.com/ParroquiaSedesSapientiae ');
   }
 
@@ -98,63 +95,67 @@ class _ContactoState extends State<Contacto>{
     required String subject,
     required String message,
   }) async {
-    final url = 
-    'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull(message)}';
-      await launch(url);
+    final url =
+        'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull(message)}';
+    await launch(url);
   }
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        drawer: NavigationDrawerWidget(),
-        appBar: AppBar(
-          title: Text('Contacto'),
-          centerTitle: true,
-          backgroundColor: Colors.red,
-        ),
-        body:Builder(
-          builder: (context) => Center(
-            child: new Column(
-              children: <Widget>[
-                Container(
-                  height: 30,
-                ),
-                Container(  ///////////////////////////////////////////////////////////
+      drawer: NavigationDrawerWidget(),
+      appBar: AppBar(
+        title: Text('Contacto'),
+        centerTitle: true,
+        backgroundColor: Colors.red,
+      ),
+      body: Builder(
+        builder: (context) => Center(
+          child: new Column(
+            children: <Widget>[
+              Container(
+                height: 30,
+              ),
+              Expanded(
+                child: Container(
+                  ///////////////////////////////////////////////////////////
                   margin: EdgeInsets.all(10),
                   height: 75.0,
                   width: 250,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
-                    ),
+                        borderRadius: BorderRadius.circular(18.0),
+                        side:
+                            BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: hacerLlamada,
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
                     textColor: Colors.black,
-                    child: 
-                      Align(
-                        alignment: Alignment.centerLeft, 
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(text: "Teléfono          ", style: TextStyle(fontSize: 26, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.phone, size: 50))
-                            ]
-                          )
-                        ),
-                      ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: "Teléfono          ",
+                            style:
+                                TextStyle(fontSize: 26, color: Colors.black)),
+                        WidgetSpan(child: Icon(Icons.phone, size: 50))
+                      ])),
+                    ),
                   ),
                 ),
-                Container(  ///////////////////////////////////////////////////////////
+              ),
+              Expanded(
+                child: Container(
+                  ///////////////////////////////////////////////////////////
                   margin: EdgeInsets.all(10),
                   height: 75.0,
                   width: 250,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
-                    ),
-                    onPressed: (){
+                        borderRadius: BorderRadius.circular(18.0),
+                        side:
+                            BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
+                    onPressed: () {
                       String msj = "¡Quiero acercarme a Dios!";
                       List<String> d = ["+52 1 5587920511"];
                       enviarSMS(msj, d);
@@ -162,29 +163,31 @@ class _ContactoState extends State<Contacto>{
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
                     textColor: Colors.black,
-                    child: 
-                      Align(
-                        alignment: Alignment.centerLeft, 
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(text: "Mensaje de texto   ", style: TextStyle(fontSize: 20, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.message, size: 40))
-                            ]
-                          )
-                        ),
-                      ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: "Mensaje de texto   ",
+                            style:
+                                TextStyle(fontSize: 20, color: Colors.black)),
+                        WidgetSpan(child: Icon(Icons.message, size: 40))
+                      ])),
+                    ),
                   ),
                 ),
-                Container(  ///////////////////////////////////////////////////////////
+              ),
+              Expanded(
+                child: Container(
+                  ///////////////////////////////////////////////////////////
                   margin: EdgeInsets.all(10),
                   height: 75.0,
                   width: 250,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
-                    ),
+                        borderRadius: BorderRadius.circular(18.0),
+                        side:
+                            BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: () {
                       String mensaje = "¡Quiero acercarme a Dios!";
                       String destinatario = "+52 1 5587920511";
@@ -193,93 +196,95 @@ class _ContactoState extends State<Contacto>{
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
                     textColor: Colors.black,
-                    child: 
-                      Align(
-                        alignment: Alignment.centerLeft, 
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(text: "WhatsApp     ", style: TextStyle(fontSize: 26, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.messenger_rounded, size: 55))
-                            ]
-                          )
-                        ),
-                      ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: "WhatsApp     ",
+                            style:
+                                TextStyle(fontSize: 26, color: Colors.black)),
+                        WidgetSpan(
+                            child: Icon(Icons.messenger_rounded, size: 55))
+                      ])),
+                    ),
                   ),
                 ),
-                Container(  ///////////////////////////////////////////////////////////
+              ),
+              Expanded(
+                child: Container(
+                  ///////////////////////////////////////////////////////////
                   margin: EdgeInsets.all(10),
                   height: 75.0,
                   width: 250,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
-                    ),
+                        borderRadius: BorderRadius.circular(18.0),
+                        side:
+                            BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: () => launchEmail(
-                      toEmail: "parroquia_sedes@arcol.org",
-                      subject: "Informes de sacrametos",
-                      message: "Hola"
-                    ),
+                        toEmail: "parroquia_sedes@arcol.org",
+                        subject: "Informes de sacrametos",
+                        message: "Hola"),
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
                     textColor: Colors.black,
-                    child: 
-                      Align(
-                        alignment: Alignment.centerLeft, 
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(text: "Mail               ", style: TextStyle(fontSize: 26, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.mail, size: 55))
-                            ]
-                          )
-                        ),
-                      ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: "Mail               ",
+                            style:
+                                TextStyle(fontSize: 26, color: Colors.black)),
+                        WidgetSpan(child: Icon(Icons.mail, size: 55))
+                      ])),
+                    ),
                   ),
                 ),
-                Container(  ///////////////////////////////////////////////////////////
+              ),
+              Expanded(
+                child: Container(
+                  ///////////////////////////////////////////////////////////
                   margin: EdgeInsets.all(10),
                   height: 75.0,
                   width: 250,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Color.fromRGBO(0, 160, 227, 1))
-                    ),
+                        borderRadius: BorderRadius.circular(18.0),
+                        side:
+                            BorderSide(color: Color.fromRGBO(0, 160, 227, 1))),
                     onPressed: () {
                       openURLYT();
                     },
                     padding: EdgeInsets.all(10.0),
                     color: Colors.white38,
                     textColor: Colors.black,
-                    child: 
-                      Align(
-                        alignment: Alignment.centerLeft, 
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(text: "YouTube       ", style: TextStyle(fontSize: 26, color: Colors.black)),
-                              WidgetSpan(child: Icon(Icons.video_camera_back, size: 55))
-                            ]
-                          )
-                        ),
-                      ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: "YouTube       ",
+                            style:
+                                TextStyle(fontSize: 26, color: Colors.black)),
+                        WidgetSpan(
+                            child: Icon(Icons.video_camera_back, size: 55))
+                      ])),
+                    ),
                   ),
                 ),
-                Container(height: 10,),
-                SignInButton(
-                  Buttons.Facebook, 
+              ),
+              Container(
+                height: 10,
+              ),
+              SignInButton(Buttons.Facebook,
                   text: "¡Síganos en Facebook!",
-                  padding: EdgeInsets.all(19),
-                  onPressed: (){
-                    openURLFace();
-                  }
-                )
-              ],
-            ),
+                  padding: EdgeInsets.all(19), onPressed: () {
+                openURLFace();
+              })
+            ],
           ),
-        )
-      );
-
+        ),
+      ));
 }
