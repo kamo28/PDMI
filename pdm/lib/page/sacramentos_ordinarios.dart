@@ -69,10 +69,10 @@ class _sacramentos_ordinariosState extends State<sacramentos_ordinarios> {
                                 TextSpan(
                                     text: "Examen de conciencia       ",
                                     style: TextStyle(
-                                        fontSize: 34, color: Colors.black)),
+                                        fontSize: 30, color: Colors.black)),
                                 WidgetSpan(
                                     child:
-                                        Icon(Icons.checklist_rounded, size: 70))
+                                        Icon(Icons.checklist_rounded, size: 50))
                               ])),
                             ),
                           ),
@@ -105,11 +105,11 @@ class _sacramentos_ordinariosState extends State<sacramentos_ordinarios> {
                                 TextSpan(
                                     text: "Intenciones \nde misa            ",
                                     style: TextStyle(
-                                        fontSize: 34, color: Colors.black)),
+                                        fontSize: 30, color: Colors.black)),
                                 WidgetSpan(
                                     child: Icon(
                                         Icons.settings_accessibility_rounded,
-                                        size: 70))
+                                        size: 50))
                               ])),
                             ),
                           ),
@@ -142,10 +142,10 @@ class _sacramentos_ordinariosState extends State<sacramentos_ordinarios> {
                                     text:
                                         "Horarios \nde misa                    ",
                                     style: TextStyle(
-                                        fontSize: 26, color: Colors.black)),
+                                        fontSize: 30, color: Colors.black)),
                                 WidgetSpan(
                                     child:
-                                        Icon(Icons.schedule_rounded, size: 70))
+                                        Icon(Icons.schedule_rounded, size: 50))
                               ])),
                             ),
                           ),

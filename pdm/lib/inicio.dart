@@ -99,7 +99,7 @@ class _MainPageState extends State<MainPage> {
                           TextSpan(
                               text: "Solicitud de \nSacramentos   ",
                               style:
-                                  TextStyle(fontSize: 34, color: Colors.black)),
+                                  TextStyle(fontSize: 29, color: Colors.black)),
                           WidgetSpan(child: Icon(Icons.book, size: 70))
                         ])),
                       ),
@@ -133,7 +133,7 @@ class _MainPageState extends State<MainPage> {
                           TextSpan(
                               text: "Donaciones      ",
                               style:
-                                  TextStyle(fontSize: 34, color: Colors.black)),
+                                  TextStyle(fontSize: 30, color: Colors.black)),
                           WidgetSpan(
                               child: Icon(Icons.monetization_on, size: 70))
                         ])),
